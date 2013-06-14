@@ -11,6 +11,7 @@
 #define FBSTRING_LegalCopyright "${FBSTRING_LegalCopyright}"
 #define FBSTRING_PluginFileName "${FBSTRING_PluginFileName}"
 #define FBSTRING_ProductName "${FBSTRING_ProductName}"
+#define FBSTRING_ProductDomain "${FBSTRING_ProductDomain}"
 #define FBSTRING_PluginName "${FBSTRING_PluginName}"
 #define FBSTRING_PluginDomain "${FBSTRING_PluginDomain}"
 
