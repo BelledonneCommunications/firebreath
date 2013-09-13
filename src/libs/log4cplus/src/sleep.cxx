@@ -51,7 +51,7 @@ unix_nanosleep (const struct timespec *req, struct timespec *rem)
 #if defined (LOG4CPLUS_HAVE_CLOCK_NANOSLEEP)
     return clock_nanosleep (CLOCK_REALTIME, 0, req, rem);
 
-#elif defined (LOG4CPLUS_HAVE_NANOSLEEP)
+#elif defined (LOG4CPLUS_HAVE_NANOSLEEP) || defined (__APPLE__)
     return nanosleep (req, rem);
 
 #else
