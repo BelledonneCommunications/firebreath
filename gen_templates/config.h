@@ -8,6 +8,7 @@
 #define FBSTRING_CompanyName "${FBSTRING_CompanyName}"
 #define FBSTRING_CompanyDomain "${FBSTRING_CompanyDomain}"
 #define FBSTRING_PLUGIN_VERSION "${FBSTRING_PLUGIN_VERSION}"
+#define FBSTRING_PLUGIN_GIT_REVISION "${FBSTRING_PLUGIN_GIT_REVISION}"
 #define FBSTRING_LegalCopyright "${FBSTRING_LegalCopyright}"
 #define FBSTRING_PluginFileName "${FBSTRING_PluginFileName}"
 #define FBSTRING_ProductName "${FBSTRING_ProductName}"
