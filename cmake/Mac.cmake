@@ -34,6 +34,8 @@ if ("${CMAKE_GENERATOR}" STREQUAL "Xcode" AND NOT XCODE_DIR)
     set (XCODE_DIR "${XCODE_DIR}" CACHE PATH "Path to Xcode")
 endif()
 
+set(SUFFIX ".dylib")
+
 function(patch_xcode_plugin PRJNAME TARGETNAME)
 
     file(APPEND ${PATCH_DESC_FILENAME} "${TARGETNAME} ${PRJNAME}\n")
@@ -86,7 +88,7 @@ MACRO(add_mac_plugin PROJECT_NAME PLIST_TEMPLATE STRINGS_TEMPLATE LOCALIZED_TEMP
     firebreath_find_commands()
     set(RC_COMPILER ${CMD_REZ})
     execute_process(COMMAND
-        ${RC_COMPILER} ${RCFILES} -useDF ${ARCHS} -arch x86_64 -o ${CMAKE_CURRENT_BINARY_DIR}/bundle/English.lproj/Localized.rsrc
+        ${RC_COMPILER} ${RCFILES} -useDF ${ARCHS} -arch x86_64 -o ${CMAKE_CURRENT_BINARY_DIR}/bundle/English.lproj/Localized.rsrc -is ${CMAKE_OSX_SYSROOT}
         )
 
     set_source_files_properties(
