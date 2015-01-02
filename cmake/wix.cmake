@@ -23,6 +23,7 @@ if (WIN32)
 
     if (NOT WIX_ROOT_DIR)
         # typical root dirs of installations, exactly one of them is used
+        SET(PROGRAMFILESX86 "ProgramFiles(x86)")
         SET (WIX_POSSIBLE_ROOT_DIRS
             "${WIX_ROOT_DIR}"
             "$ENV{WIX}"
@@ -33,12 +34,12 @@ if (WIN32)
             "$ENV{ProgramFiles}/Windows Installer XML v3.6"
             "$ENV{ProgramFiles}/WiX Toolset v3.6"
             "$ENV{ProgramFiles}/WiX Toolset v3.7"
-            "$ENV{ProgramFiles(x86)}/Windows Installer XML"
-            "$ENV{ProgramFiles(x86)}/Windows Installer XML v3"
-            "$ENV{ProgramFiles(x86)}/Windows Installer XML v3.5"
-            "$ENV{ProgramFiles(x86)}/Windows Installer XML v3.6"
-            "$ENV{ProgramFiles(x86)}/WiX Toolset v3.6"
-            "$ENV{ProgramFiles(x86)}/WiX Toolset v3.7"
+            "$ENV{${PROGRAMFILESX86}}/Windows Installer XML"
+            "$ENV{${PROGRAMFILESX86}}/Windows Installer XML v3"
+            "$ENV{${PROGRAMFILESX86}}/Windows Installer XML v3.5"
+            "$ENV{${PROGRAMFILESX86}}/Windows Installer XML v3.6"
+            "$ENV{${PROGRAMFILESX86}}/WiX Toolset v3.6"
+            "$ENV{${PROGRAMFILESX86}}/WiX Toolset v3.7"
             )
 
 
